@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Array</title>
+        <script  type="text/javascript">
+            document.write("<h3>Array</h3>");
+        /*
+        var cars = ["BMW","Volvo","Audi"]
+        cars.push("Honda")
+        for(var i=0;i<4;i++)
+        {
+            document.write("<h4>"+cars[i]+"<h4>");
+        }
+        
+        var car = {
+            car_brand:"Honda",
+            car_model : "800",
+            price : 1000,
+
+            hondaAutopilot : function()
+            {
+                document.write("<h4>Dum hai gadddi me<h4>");    
+            }
+        }
+
+        document.write("<h5>"+car.hondaAutopilot()+"<h5>");
+        */
+        function Cars(car_brand, car_model,price)
+        {
+            this.car_brand = car_brand;
+            this.car_model = car_model;
+            this.price = price;
+            this.hondaAutopilot = function()
+            {
+                document.write("<h4>Dum hai gadddi me<h4>");
+            }
+        }
+
+        var c1 = new Cars("Honda","800",10000);
+        c1.hondaAutopilot();
+        var c2 = new Cars("Tesla","Model 3",100000);
+        document.write("<h4>"+c2.car_brand+"<h4>");
+
+
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+</html>

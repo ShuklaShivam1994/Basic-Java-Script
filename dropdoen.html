@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>DOM</title>
+        <script  type="text/javascript">
+            document.write("<h3>Dropdown</h3>");
+        
+        function buttonClick()
+        {
+            
+            var para = document.getElementsByClassName("abc");
+            for(var i = 0; i<para.length; i++)
+            {
+                para[i].style.color = "red";
+            }           
+            /*
+            var x = document.getElementById("sd1");
+            alert(x.options[x.selectedIndex].value);
+
+            var para = document.getElementsByTagName("p");
+            
+            for(var i = 0; i < para.length; i++)
+            {
+                para[i].style.color = "red";
+            }
+            */
+        }
+
+        function changeImage()
+        {
+            document.getElementById("img1").src="1.jpg"
+        }
+        
+        function changeBackgroynd()
+        {
+            document.getElementById("img1").src="shiv.jpg"
+        }
+
+        </script>
+    </head>
+
+    <body>
+        
+        <br><br>
+        <p class="abc">THis is 1</p>
+        <p>THis is 2</p>
+        <p>THis is 3</p>
+        <p class="abc">THis is 4</p>
+        <p>THis is 5</p>
+        <br><br>
+        <img id="img1" onmouseover="changeImage()" onmouseout="changeBackgroynd()" src="shiv.jpg" width="300"/>
+        <br><br>
+        <button onclick="buttonClick()" id="btn1">Click Me</button>
+          
+    </body>
+</html>

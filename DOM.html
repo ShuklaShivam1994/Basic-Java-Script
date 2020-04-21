@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>DOM</title>
+        <script  type="text/javascript">
+            document.write("<h3>DOM</h3>");
+        
+        function buttonClick()
+        {
+            var x = document.getElementById("text1").value;
+            var y = document.getElementById("text2").value;
+            
+            var r1 = document.getElementById("rd1");
+            var r2 = document.getElementById("rd2");
+
+            if(r1.checked==true)
+                {
+                alert("You are "+r1.value);
+                }
+
+            if(x == "Shivam" && y == "Shukla")
+                {
+                alert("Welcome");
+                }
+            else
+                {
+                alert("Get Lost");
+                }
+        }
+        
+        </script>
+    </head>
+
+    <body>
+        <input id="text1" placeholder="Username">
+        <br><br>
+        <input type=password id="text2" placeholder="Password">
+        <br><br>
+        <input id = "rd1" name="grp1" type="radio" value="Loda">Loda</input>
+        <br><br>        
+        <input id = "rd2" name="grp1" type="radio" value="Chodu">Chodu</input>
+        <br><br>
+        <button onclick="buttonClick()" id="btn1">Click Me</button>    
+          
+    </body>
+</html>

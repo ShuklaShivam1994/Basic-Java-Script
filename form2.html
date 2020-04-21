@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Form</title>
+        <script  type="text/javascript">
+            document.write("<h3>Form2</h3>");
+        /*
+        function validate()
+        {
+            var a = document.getElementById("t1").value;
+            var b = document.getElementById("t2").value;
+
+            document.getElementById("lb1").style.visibility="visible";
+            document.getElementById("lb1").innerHTML="Result = "+(a+b);
+        } 
+        */ 
+
+        var id  = 0;
+        var sec = 0;
+
+        function printMsg()
+       {
+            document.getElementById("lb2").innerHTML=sec + "sec done";
+            sec++;
+       }
+        function start()
+       {
+            //id = window.setTimeout(printMsg, 3000);
+            id = window.setInterval(printMsg, 2000);
+       }
+
+       function stop()
+       {
+            window.clearTimeout(id);
+       }
+        </script>
+    </head>
+
+    <body>
+        <form action="https://www.google.com/">
+
+            
+            <label id="lb1" style="color: red; visibility: hidden;">Result</label>
+            <br><br>
+            <button  id="btn1" type="button" onclick="start()">start</button>
+            <br><br>
+            <label id="lb2" style="color: red;">Result</label>
+            <br><br>
+            <button  id="btn1" type="button" onclick="stop()">stop</button>
+        </form>
+    </body>
+</html>

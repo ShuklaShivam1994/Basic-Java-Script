@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Form</title>
+        <script  type="text/javascript">
+            document.write("<h3>Dropdown</h3>");
+        
+        function validate()
+        {
+            var username = document.getElementById("uname").value;
+            
+            //regx = new RegExp("E00","i");
+            //var regx = /^[7-9]\d{8}$[0]/;
+            var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/
+            
+            if(regx.test(username))
+            {
+                alert("valid");
+            }
+            else
+            {
+                alert("Invalid");
+                document.getElementById("lb1").style.visibility="visible";
+            }
+            
+            /*
+            if(username.value.trim() == "")
+            {
+                //alert("Blank Username");
+                uname.style.border = "solid 3px red";
+                document.getElementById("lb1").style.visibility="visible";
+                return false;
+            }
+            else if(password.value.trim() == "" )
+            {
+                password.style.border = "solid 10px yellow";
+                //alert("Blank Password");
+                return false;
+            }
+            else if(password.value.trim().length<5)
+            {
+                alert("Small Password");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+            
+            var username = document.getElementById("uname");
+            var password = document.getElementById("pass");
+
+            if(username.value.trim() == "" || password.value.trim() == "")
+            {
+                alert("NO");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+            */
+        }  
+        </script>
+    </head>
+
+    <body>
+        <form action="https://www.google.com/">
+
+            <input id="uname" type="text" placeholder="Username"></input>
+            <label id="lb1" style="color: red; visibility: hidden;">Invalid</label>
+            <br><br>
+            <input id="pass" type="password" placeholder="Password">Password</input>
+            <br><br>
+            <button  id="btn1" type="button" onclick="validate()">Submit</button>
+            </form>
+    </body>
+</html>
